@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { ColorModeScript } from "@chakra-ui/react";
 import { Providers } from "#/src/components/Providers";
 import favicon from "#/public/images/favicon.png";
 import SummaryLargeImage from "#/public/images/summary_large_image.png";
 import Cookie from "../components/Cookie";
-import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
 
 import "./globals.scss";
 import Footer from "../components/Footer";
+import { customTheme } from "./theme";
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,26 +17,26 @@ interface LayoutProps {
 
 export const viewport: Viewport = {
   themeColor: "#e141c0",
-  colorScheme: "light",
+  colorScheme: "light dark",
   initialScale: 1,
   width: "device-width",
 };
 
 export const metadata: Metadata = {
   title: {
-    template: "Stargate | %s",
-    default: "Stargate | NextJS SaaS Landing",
+    template: "ForAIMentors | %s",
+    default: "ForAIMentors | Build AI Skills With People Who Work in Tech",
   },
   description:
-    "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
+    "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers. Develop practical skills, learn how AI technologies work, and discover opportunities in tech.",
   icons: [{ rel: "icon", url: favicon.src }],
-  metadataBase: new URL("https://stargate.nfteam.eu/"),
+  metadataBase: new URL("https://foraimentors.com/"),
   openGraph: {
-    title: "Stargate | NextJS SaaS Landing",
-    siteName: "Stargate | NextJS SaaS Landing",
+    title: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+    siteName: "ForAIMentors",
     description:
-      "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
-    url: "https://stargate.nfteam.eu/",
+      "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers across the United States and Taiwan.",
+    url: "https://foraimentors.com/",
     type: "website",
     locale: "en_US",
     images: [
@@ -43,28 +44,26 @@ export const metadata: Metadata = {
         url: SummaryLargeImage.src,
         width: SummaryLargeImage.width,
         height: SummaryLargeImage.height,
-        alt: "Stargate | NextJS SaaS Landing",
+        alt: "ForAIMentors | Build AI Skills With People Who Work in Tech",
       },
     ],
   },
   twitter: {
-    title: "Stargate | NextJS SaaS Landing",
-    creator: "@nfteam_eu",
-    site: "@nfteam_eu",
+    title: "ForAIMentors | Build AI Skills With People Who Work in Tech",
     description:
-      "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
+      "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers across the United States and Taiwan.",
     card: "summary_large_image",
     images: [
       {
         url: SummaryLargeImage.src,
         width: SummaryLargeImage.width,
         height: SummaryLargeImage.height,
-        alt: "Stargate | NextJS SaaS Landing",
+        alt: "ForAIMentors | Build AI Skills With People Who Work in Tech",
       },
     ],
   },
   alternates: {
-    canonical: "https://stargate.nfteam.eu/",
+    canonical: "https://foraimentors.com/",
   },
 };
 
@@ -72,9 +71,11 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body>
+        <ColorModeScript
+          initialColorMode={customTheme.config.initialColorMode}
+        />
         <Providers>
           <Cookie />
-          <Banner />
           <Navbar />
           {children}
           <Footer />

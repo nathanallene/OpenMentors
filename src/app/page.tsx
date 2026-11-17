@@ -1,19 +1,23 @@
 import Header from "../components/Header";
-import Audience from "../components/Audience";
-import Features from "../components/Features";
-import Functions from "../components/Functions";
-import Product from "../components/Product";
-import Pricing from "../components/Pricing";
+import Services from "../components/Services";
+import Approach from "../components/Approach";
+import WhatWeDo from "../components/WhatWeDo";
+import EngineeringServices from "../components/EngineeringServices";
+import Insights from "../components/Insights";
+import FAQ from "../components/FAQ";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <Features />
-      <Functions />
-      <Audience />
-      <Product />
-      <Pricing />
+      <Services />
+      <Approach />
+      <WhatWeDo />
+      <EngineeringServices />
+      <Insights />
+      <FAQ />
+      <Contact />
     </main>
   );
 }
