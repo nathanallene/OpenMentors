@@ -43,7 +43,7 @@ const Services = () => {
         lineHeight={1.7}
       >
         Learning and mentorship, engineering work, and guidance across AI
-        platforms — shared across the United States and Taiwan.
+        platforms.
       </Text>
       <Grid
         templateColumns={{
