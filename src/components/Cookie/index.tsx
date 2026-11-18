@@ -12,23 +12,21 @@ const Cookie: FC = () => {
     <Flex
       bg={colors.surface}
       shadow="lg"
-      rounded={{ base: "2xl", md: "full" }}
-      padding={{ base: 4, md: "8px 8px 8px 16px" }}
+      rounded="2xl"
+      p={5}
       position="fixed"
-      left="50%"
-      bottom={8}
-      transform="translateX(-50%)"
-      justify={{ base: "space-between", lg: "center" }}
-      align="center"
-      gap={4}
-      w={{ base: "92%", md: "75%", lg: "auto" }}
+      left={{ base: 4, md: 6 }}
+      bottom={{ base: 4, md: 6 }}
+      maxW={{ base: "calc(100% - 32px)", md: 280 }}
       zIndex={1000}
       border={`1px solid ${colors.border}`}
-      direction={{ base: "column", md: "row" }}
+      direction="column"
+      align="flex-start"
+      gap={3}
     >
-      <Text color={colors.muted} fontSize="small" textAlign={{ base: "center", md: "left" }}>
-        This website stores a small preference so we can remember cookie consent
-        and theme settings.
+      <Text color={colors.muted} fontSize="sm" lineHeight={1.6}>
+        We store a small preference to remember your cookie consent and theme
+        settings.
       </Text>
       <Button
         rounded="full"

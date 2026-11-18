@@ -6,14 +6,15 @@ import {
 import { useBrandColors } from "#/src/utils/useBrandColors";
 import {
   Flex,
+  Grid,
   Heading,
-  List,
-  ListItem,
+  Icon,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { LuCheck } from "react-icons/lu";
 
 const EngineeringServices = () => {
   const [current, setCurrent] = useState(engineeringServices[0].id);
@@ -103,6 +104,7 @@ const EngineeringServices = () => {
               key={service.id}
               as="button"
               type="button"
+              aria-pressed={isActive}
               cursor="pointer"
               onClick={() => setCurrent(service.id)}
               px={4}
@@ -140,47 +142,62 @@ const EngineeringServices = () => {
         >
           <Flex
             direction="column"
-            px={{ base: 4, md: 8 }}
-            py={{ base: 6, md: 8 }}
+            px={{ base: 5, md: 10 }}
+            py={{ base: 6, md: 10 }}
             gap={4}
-            align="center"
-            textAlign="center"
+            align="flex-start"
+            textAlign="left"
             mt={2}
             borderRadius={20}
             bg={panelBg}
             border={`1px solid ${colors.border}`}
           >
             <Text
-              fontSize="sm"
+              fontSize="xs"
               fontWeight={700}
               color={colors.primary}
-              letterSpacing="0.08em"
+              letterSpacing="0.12em"
+              textTransform="uppercase"
             >
-              {active.step} · {active.title}
+              Service {active.step}
             </Text>
             <Heading fontSize={{ base: "xl", md: "2xl" }} color={colors.heading}>
               {active.title}
             </Heading>
-            <Text color={colors.muted} lineHeight={1.8} maxW={800} textAlign="center">
+            <Text color={colors.heading} fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
+              {active.summary}
+            </Text>
+            <Text color={colors.muted} lineHeight={1.8} maxW={800}>
               {active.description}
             </Text>
-            <List spacing={3} mt={2} maxW={700} w="100%">
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+              gap={3}
+              mt={2}
+              w="100%"
+            >
               {active.bullets.map((bullet) => (
-                <ListItem
+                <Flex
                   key={bullet}
-                  display="flex"
-                  alignItems="flex-start"
-                  justifyContent="center"
+                  align="flex-start"
                   gap={3}
-                  textAlign="center"
+                  p={4}
+                  borderRadius={14}
+                  bg={colors.elevated}
+                  border={`1px solid ${colors.border}`}
                 >
-                  <Text color={colors.primary} fontWeight={700} mt="2px">
-                    •
+                  <Icon
+                    as={LuCheck}
+                    color={colors.primary}
+                    mt="3px"
+                    flexShrink={0}
+                  />
+                  <Text color={colors.muted} fontSize="sm" lineHeight={1.6}>
+                    {bullet}
                   </Text>
-                  <Text color={colors.muted}>{bullet}</Text>
-                </ListItem>
+                </Flex>
               ))}
-            </List>
+            </Grid>
           </Flex>
         </motion.div>
       </AnimatePresence>

@@ -23,7 +23,7 @@ import FooterBg from "./FooterBg";
 const navigation = [
   { name: "Home", href: "/#home" },
   { name: "Services", href: "/#services" },
-  { name: "Engineering Insights", href: "/#insights" },
+  { name: "Insights", href: "/#insights" },
   { name: "FAQ", href: "/#faq" },
   { name: "Contact", href: "/#contact" },
 ];
@@ -112,7 +112,7 @@ const Footer = () => {
           maxW={700}
           fontWeight={800}
           style={{
-            backgroundImage: "linear-gradient(315deg, #ffffff 60%, #000000)",
+            backgroundImage: "linear-gradient(315deg, #ffffff 40%, #f0abfc)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
           }}
