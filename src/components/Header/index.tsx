@@ -17,7 +17,7 @@ import Link from "next/link";
 const Header = () => {
   const heroGradient = useColorModeValue(
     "linear-gradient(120deg,#70A4D4 0%,#ca71ff 20%,#8469cc 30%,#48B9E6 50%,#8469cc 70%,#9F70D4 100%)",
-    "linear-gradient(120deg,#18181b 0%,#52525b 20%,#27272a 30%,#71717a 50%,#27272a 70%,#3f3f46 100%)"
+    "linear-gradient(120deg,#09090b 0%,#27272a 20%,#3f3f46 30%,#18181b 50%,#3f3f46 70%,#27272a 100%)"
   );
 
   return (
