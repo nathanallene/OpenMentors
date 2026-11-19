@@ -17,8 +17,12 @@ import Link from "next/link";
 const Header = () => {
   const heroGradient = useColorModeValue(
     "linear-gradient(120deg,#70A4D4 0%,#ca71ff 20%,#8469cc 30%,#48B9E6 50%,#8469cc 70%,#9F70D4 100%)",
-    "linear-gradient(120deg,#09090b 0%,#27272a 20%,#3f3f46 30%,#18181b 50%,#3f3f46 70%,#27272a 100%)"
+    "linear-gradient(120deg,#07070d 0%,#2a1065 20%,#5b21b6 32%,#0e7490 50%,#5b21b6 66%,#9d174d 82%,#0b0b14 100%)"
   );
+  const pillBg = useColorModeValue("#ffffff50", "#ffffff1f");
+  const pillBorder = useColorModeValue("transparent", "#ffffff33");
+  const outlineHoverBg = useColorModeValue("#ffffff25", "#ffffff1f");
+  const outlineBorder = useColorModeValue("white", "#ffffffb3");
 
   return (
     <Flex
@@ -38,7 +42,15 @@ const Header = () => {
       pt={24}
       pb={32}
     >
-      <Flex bg={"#ffffff50"} px={4} py={1} rounded={"full"} mb={5}>
+      <Flex
+        bg={pillBg}
+        border={`1px solid ${pillBorder}`}
+        px={4}
+        py={1}
+        rounded={"full"}
+        mb={5}
+        backdropFilter="blur(8px)"
+      >
         <Text color={StargateColors.white} fontSize={"xs"} fontWeight={600}>
           United States · Taiwan
         </Text>
@@ -112,9 +124,9 @@ const Header = () => {
           cursor={"pointer"}
           rounded="full"
           variant="outline"
-          borderColor="white"
+          borderColor={outlineBorder}
           color="white"
-          _hover={{ bg: "#ffffff25" }}
+          _hover={{ bg: outlineHoverBg }}
         >
           Contact Us
         </Button>

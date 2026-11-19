@@ -3,8 +3,8 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
 const FooterBg = () => {
-  const glowStart = useColorModeValue(StargateColors.primary, "#52525b");
-  const glowEnd = useColorModeValue(StargateColors.secondary, "#71717a");
+  const glowStart = useColorModeValue(StargateColors.primary, "#5b21b6");
+  const glowEnd = useColorModeValue(StargateColors.secondary, "#0e7490");
   const baseStyle = `${glowStart},${glowEnd}75, transparent, transparent, transparent`;
 
   return (

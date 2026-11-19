@@ -46,11 +46,12 @@ a {
   border-radius: 999px;
 }
 
-/* Dark mode: black and gray scrollbar */
+/* Dark mode: violet scrollbar that matches the hero */
+html[data-theme="dark"],
 html[data-theme="dark"] * {
-  scrollbar-color: #52525b transparent;
+  scrollbar-color: #6d28d9 transparent;
 }
 
 html[data-theme="dark"] *::-webkit-scrollbar-thumb {
-  background-color: #52525b;
+  background-color: #6d28d9;
 }
