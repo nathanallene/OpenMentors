@@ -33,7 +33,7 @@ const Cookie: FC = () => {
         fontSize="small"
         size="sm"
         bg={colors.primary}
-        color="white"
+        color={colors.onPrimary}
         _hover={{ opacity: 0.85 }}
         px={5}
         onClick={() => {

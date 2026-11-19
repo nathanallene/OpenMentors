@@ -19,7 +19,7 @@ import { LuCheck } from "react-icons/lu";
 const EngineeringServices = () => {
   const [current, setCurrent] = useState(engineeringServices[0].id);
   const colors = useBrandColors();
-  const panelBg = useColorModeValue("rgba(247, 245, 251, 0.8)", "rgba(23, 26, 34, 0.9)");
+  const panelBg = useColorModeValue("rgba(247, 245, 251, 0.8)", "rgba(22, 22, 24, 0.9)");
   const active = engineeringServices.find((s) => s.id === current) ?? engineeringServices[0];
 
   useEffect(() => {

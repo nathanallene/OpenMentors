@@ -1,5 +1,12 @@
 "use client";
-import { Button, Flex, Heading, Text, keyframes } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  keyframes,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import HeroBottomSVG from "./HeroBottomSVG";
@@ -8,6 +15,11 @@ import { LuArrowRight, LuSparkles } from "react-icons/lu";
 import Link from "next/link";
 
 const Header = () => {
+  const heroGradient = useColorModeValue(
+    "linear-gradient(120deg,#70A4D4 0%,#ca71ff 20%,#8469cc 30%,#48B9E6 50%,#8469cc 70%,#9F70D4 100%)",
+    "linear-gradient(120deg,#18181b 0%,#52525b 20%,#27272a 30%,#71717a 50%,#27272a 70%,#3f3f46 100%)"
+  );
+
   return (
     <Flex
       as={motion.div}
@@ -15,9 +27,7 @@ const Header = () => {
       animate="animate"
       id="home"
       minH="100svh"
-      bg={
-        "linear-gradient(120deg,#70A4D4 0%,#ca71ff 20%,#8469cc 30%,#48B9E6 50%,#8469cc 70%,#9F70D4 100%)"
-      }
+      bg={heroGradient}
       bgSize={"200% 200%"}
       animation={`${bgAnimation} 20s ease-in-out alternate infinite`}
       position={"relative"}

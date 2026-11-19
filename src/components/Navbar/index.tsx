@@ -31,9 +31,11 @@ const Navbar: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const scrolledBg = useColorModeValue(
     "rgba(255,255,255,0.92)",
-    "rgba(15,17,23,0.92)"
+    "rgba(10,10,11,0.92)"
   );
   const scrolledColor = useColorModeValue("black", "white");
+  const scrolledButtonBg = useColorModeValue(StargateColors.primary, StargateColors.primaryDark);
+  const scrolledButtonColor = useColorModeValue("white", "black");
   const hoverBgScrolled = useColorModeValue("#00000010", "#ffffff18");
   const scrolledBorder = useColorModeValue(
     "rgba(9,9,11,0.08)",
@@ -136,9 +138,9 @@ const Navbar: FC = () => {
             whileHover={{ scale: 1.05 }}
             href="#contact"
             rounded="full"
-            background={isScrolled ? StargateColors.primary : "white"}
-            color={isScrolled ? "white" : "black"}
-            _hover={{ bg: isScrolled ? StargateColors.primary : "white" }}
+            background={isScrolled ? scrolledButtonBg : "white"}
+            color={isScrolled ? scrolledButtonColor : "black"}
+            _hover={{ bg: isScrolled ? scrolledButtonBg : "white" }}
           >
             Contact Us
           </Button>
@@ -190,8 +192,8 @@ const Navbar: FC = () => {
             whileHover={{ scale: 1.05 }}
             href="#contact"
             rounded="full"
-            background={isScrolled ? StargateColors.primary : "white"}
-            color={isScrolled ? "white" : "black"}
+            background={isScrolled ? scrolledButtonBg : "white"}
+            color={isScrolled ? scrolledButtonColor : "black"}
             onClick={onClose}
           >
             Contact Us

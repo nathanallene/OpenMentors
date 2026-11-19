@@ -45,3 +45,12 @@ a {
   background-color: #e340bf;
   border-radius: 999px;
 }
+
+/* Dark mode: black and gray scrollbar */
+html[data-theme="dark"] * {
+  scrollbar-color: #52525b transparent;
+}
+
+html[data-theme="dark"] *::-webkit-scrollbar-thumb {
+  background-color: #52525b;
+}

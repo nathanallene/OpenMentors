@@ -24,7 +24,7 @@ export const customTheme = extendTheme({
           props.colorMode === "dark"
             ? StargateColors.darkBg
             : StargateColors.pageBgLight,
-        color: props.colorMode === "dark" ? "#f4f6fb" : StargateColors.black,
+        color: props.colorMode === "dark" ? "#fafafa" : StargateColors.black,
         transitionProperty: "background-color, color",
         transitionDuration: "0.2s",
       },

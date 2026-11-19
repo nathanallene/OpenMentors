@@ -290,7 +290,7 @@ const Contact = () => {
             size="lg"
             rounded="full"
             bg={colors.primary}
-            color="white"
+            color={colors.onPrimary}
             _hover={{ bg: colors.primary, opacity: 0.9 }}
             mt={2}
           >

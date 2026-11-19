@@ -194,7 +194,8 @@ const FAQ = () => {
                   <Text
                     fontSize="xs"
                     fontWeight={700}
-                    color={isActive ? "rgba(255,255,255,0.75)" : colors.primary}
+                    color={isActive ? colors.tabActiveColor : colors.primary}
+                    opacity={isActive ? 0.75 : 1}
                   >
                     {category.step}
                   </Text>
@@ -287,7 +288,7 @@ const FAQ = () => {
           whileHover={{ scale: 1.05 }}
           rounded="full"
           bg={colors.primary}
-          color="white"
+          color={colors.onPrimary}
           _hover={{ bg: colors.primary, opacity: 0.9 }}
         >
           Contact Us

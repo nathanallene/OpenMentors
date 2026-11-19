@@ -1,9 +1,11 @@
 import { StargateColors } from "#/src/utils/Colors";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
 const FooterBg = () => {
-  const baseStyle = `${StargateColors.primary},${StargateColors.secondary}75, transparent, transparent, transparent`;
+  const glowStart = useColorModeValue(StargateColors.primary, "#52525b");
+  const glowEnd = useColorModeValue(StargateColors.secondary, "#71717a");
+  const baseStyle = `${glowStart},${glowEnd}75, transparent, transparent, transparent`;
 
   return (
     <Box

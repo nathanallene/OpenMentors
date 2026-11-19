@@ -112,7 +112,7 @@ const Footer = () => {
           maxW={700}
           fontWeight={800}
           style={{
-            backgroundImage: "linear-gradient(315deg, #ffffff 40%, #f0abfc)",
+            backgroundImage: "linear-gradient(315deg, #ffffff 40%, #a1a1aa)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
           }}
@@ -252,7 +252,7 @@ const Footer = () => {
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg">
         <ModalOverlay bg="blackAlpha.700" backdropFilter="blur(6px)" />
-        <ModalContent mx={4} borderRadius={20} bg="#171a22" color="white">
+        <ModalContent mx={4} borderRadius={20} bg="#161618" color="white">
           <ModalHeader>{doc?.title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={8}>
