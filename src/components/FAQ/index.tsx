@@ -102,7 +102,7 @@ const categories = [
     questions: [
       {
         q: "How can I reach ForAIMentors?",
-        a: "Use the contact form on this site or write to 2.r.3.141592@gmail.com. Selecting Send Message opens your email app with your note ready to send.",
+        a: "Use the contact form on this site or write to alex@foraimentors.com. Selecting Send Message opens your email app with your note ready to send.",
       },
       {
         q: "Can we schedule an introductory conversation?",

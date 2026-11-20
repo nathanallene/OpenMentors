@@ -23,7 +23,7 @@ const helpTopics = [
   "Discussing technical decisions or working on a project together",
 ];
 
-const CONTACT_EMAIL = "2.r.3.141592@gmail.com";
+const CONTACT_EMAIL = "alex@foraimentors.com";
 
 const Contact = () => {
   const [name, setName] = useState("");

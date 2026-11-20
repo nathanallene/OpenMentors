@@ -46,7 +46,7 @@ const legalDocs: Record<
     paragraphs: [
       "ForAIMentors collects only the information you choose to share when you contact us — typically your name, email address and message content.",
       "We use that information to respond to inquiries about learning, mentorship, collaboration and engineering services. We do not sell personal information.",
-      "If you have questions about how your information is handled, email 2.r.3.141592@gmail.com.",
+      "If you have questions about how your information is handled, email alex@foraimentors.com.",
     ],
   },
   "Terms of Service": {
