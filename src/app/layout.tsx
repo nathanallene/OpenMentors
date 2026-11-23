@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { ColorModeScript } from "@chakra-ui/react";
 import { Providers } from "#/src/components/Providers";
-import favicon from "#/public/images/favicon.png";
+import favicon from "#/src/logo.png";
 import SummaryLargeImage from "#/public/images/summary_large_image.png";
 import Cookie from "../components/Cookie";
 import Navbar from "../components/Navbar";

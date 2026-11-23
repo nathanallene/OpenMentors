@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Button,
   Collapse,
@@ -15,6 +16,7 @@ import {
 import { LuMenu, LuMoon, LuSun, LuX } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { StargateColors } from "#/src/utils/Colors";
+import logo from "#/src/logo.png";
 
 const NavItems = [
   { name: "Home", href: "/#home", sectionId: "home" },
@@ -88,16 +90,34 @@ const Navbar: FC = () => {
         align="center"
         justify="space-between"
       >
-        <Text
+        <Flex
           as={Link}
           href="/#home"
-          fontSize={{ base: "2xl", md: "3xl" }}
+          align="center"
+          gap={3}
           userSelect="none"
-          color={linkColor}
-          fontWeight={700}
+          _hover={{ textDecoration: "none" }}
         >
-          ForAIMentors
-        </Text>
+          <Image
+            src={logo}
+            alt="ForAIMentors"
+            width={52}
+            height={52}
+            priority
+            style={{
+              borderRadius: 12,
+              objectFit: "cover",
+            }}
+          />
+          <Text
+            fontSize={{ base: "2xl", md: "3xl" }}
+            color={linkColor}
+            fontWeight={700}
+            lineHeight={1}
+          >
+            ForAIMentors
+          </Text>
+        </Flex>
 
         <Flex gap={2} display={{ base: "none", lg: "flex" }} color={linkColor}>
           {NavItems.map((item) => (
