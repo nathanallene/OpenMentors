@@ -25,14 +25,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: "ForAIMentors | %s",
-    default: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+    default: "ForAIMentors",
   },
   description:
     "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers. Develop practical skills, learn how AI technologies work, and discover opportunities in tech.",
   icons: [{ rel: "icon", url: favicon.src }],
   metadataBase: new URL("https://foraimentors.com/"),
   openGraph: {
-    title: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+    title: "ForAIMentors",
     siteName: "ForAIMentors",
     description:
       "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers across the United States and Taiwan.",
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
         url: SummaryLargeImage.src,
         width: SummaryLargeImage.width,
         height: SummaryLargeImage.height,
-        alt: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+        alt: "ForAIMentors",
       },
     ],
   },
   twitter: {
-    title: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+    title: "ForAIMentors",
     description:
       "ForAIMentors brings people who want to learn AI together with AI specialists and software engineers across the United States and Taiwan.",
     card: "summary_large_image",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: SummaryLargeImage.src,
         width: SummaryLargeImage.width,
         height: SummaryLargeImage.height,
-        alt: "ForAIMentors | Build AI Skills With People Who Work in Tech",
+        alt: "ForAIMentors",
       },
     ],
   },
