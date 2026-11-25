@@ -8,6 +8,7 @@ import {
   FormLabel,
   Heading,
   Input,
+  Link,
   Text,
   Textarea,
   useToast,
@@ -24,6 +25,7 @@ const helpTopics = [
 ];
 
 const CONTACT_EMAIL = "alex@foraimentors.com";
+const CALENDLY_URL = "https://calendly.com/alex-foraimentors/30min";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -102,25 +104,97 @@ const Contact = () => {
         fontSize={{ base: "md", md: "lg" }}
         lineHeight={1.8}
       >
-        Would you like to meet others working in AI, learn a new skill or talk
-        through an idea for working together?
-      </Text>
-      <Text
-        mt={3}
-        color={colors.muted}
-        textAlign="center"
-        maxW={720}
-        fontSize={{ base: "sm", md: "md" }}
-        lineHeight={1.7}
-      >
-        We hear from individuals and organizations looking for mentorship,
-        introductions to people in tech or a conversation about AI and software
-        projects. Tell us a bit about what you’re interested in and what you’d
-        like to achieve. We’ll reply when we can.
+        The fastest way to get started is a short call. Pick a time that works
+        for you and we’ll talk through mentorship, learning, or working
+        together.
       </Text>
 
       <Flex
-        mt={12}
+        mt={10}
+        w="100%"
+        direction="column"
+        align="center"
+        gap={5}
+        py={{ base: 8, md: 10 }}
+        px={{ base: 5, md: 10 }}
+        borderRadius={28}
+        bg={colors.softBg}
+        border={`1px solid ${colors.border}`}
+        textAlign="center"
+      >
+        <Text
+          fontSize="xs"
+          letterSpacing="0.14em"
+          textTransform="uppercase"
+          fontWeight={700}
+          color={colors.primary}
+        >
+          Book a Call
+        </Text>
+        <Heading
+          fontSize={{ base: 28, md: 36 }}
+          color={colors.heading}
+          maxW={640}
+          lineHeight={1.2}
+        >
+          Schedule a 30-minute conversation
+        </Heading>
+        <Text
+          color={colors.muted}
+          maxW={620}
+          fontSize={{ base: "sm", md: "md" }}
+          lineHeight={1.7}
+        >
+          Choose a slot on Calendly. We’ll use the time to understand your goals
+          and see how ForAIMentors can help — before you join the network or
+          start a project.
+        </Text>
+        <Button
+          as={Link}
+          href={CALENDLY_URL}
+          isExternal
+          size="lg"
+          rounded="full"
+          px={10}
+          h={14}
+          fontSize={{ base: "md", md: "lg" }}
+          bg={colors.primary}
+          color={colors.onPrimary}
+          _hover={{ bg: colors.primary, opacity: 0.9, textDecoration: "none" }}
+          mt={2}
+        >
+          Book a Call on Calendly
+        </Button>
+        <Text fontSize="sm" color={colors.muted}>
+          Opens Calendly in a new tab · 30 minutes
+        </Text>
+      </Flex>
+
+      <Text
+        mt={14}
+        mb={2}
+        color={colors.muted}
+        textAlign="center"
+        fontSize="sm"
+        letterSpacing="0.08em"
+        textTransform="uppercase"
+        fontWeight={600}
+      >
+        Or send a message
+      </Text>
+      <Text
+        color={colors.muted}
+        textAlign="center"
+        maxW={640}
+        fontSize={{ base: "sm", md: "md" }}
+        lineHeight={1.7}
+        mb={8}
+      >
+        Prefer email first? Tell us what you’re interested in and we’ll reply
+        when we can — or book a call above if you’d rather talk live.
+      </Text>
+
+      <Flex
         gap={8}
         direction={{ base: "column", lg: "row" }}
         w="100%"
@@ -156,7 +230,10 @@ const Contact = () => {
                   <Text color={colors.primary} fontWeight={700}>
                     •
                   </Text>
-                  <Text color={isActive ? colors.heading : colors.muted} lineHeight={1.6}>
+                  <Text
+                    color={isActive ? colors.heading : colors.muted}
+                    lineHeight={1.6}
+                  >
                     {topic}
                   </Text>
                 </Flex>
@@ -164,14 +241,7 @@ const Contact = () => {
             })}
           </Flex>
 
-          <Flex
-            direction="column"
-            gap={2}
-            p={5}
-            borderRadius={16}
-            bg={colors.surface}
-            border={`1px solid ${colors.border}`}
-          >
+          <Flex direction="column" gap={2}>
             <Heading fontSize="md" color={colors.heading}>
               Prefer Email?
             </Heading>
@@ -187,24 +257,6 @@ const Contact = () => {
                 {CONTACT_EMAIL}
               </Text>
               , or use the form to prepare a message in your email app.
-            </Text>
-          </Flex>
-
-          <Flex
-            direction="column"
-            gap={2}
-            p={5}
-            borderRadius={16}
-            bg={colors.surface}
-            border={`1px solid ${colors.border}`}
-          >
-            <Heading fontSize="md" color={colors.heading}>
-              Introductory Conversation
-            </Heading>
-            <Text color={colors.muted} fontSize="sm" lineHeight={1.7}>
-              If you’d like to talk before joining the network or starting a
-              project, we can set up an online conversation when schedules
-              allow. Mention that preference in your message.
             </Text>
           </Flex>
         </Flex>

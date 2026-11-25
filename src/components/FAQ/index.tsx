@@ -6,12 +6,10 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Button,
   Flex,
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const categories = [
@@ -102,11 +100,11 @@ const categories = [
     questions: [
       {
         q: "How can I reach ForAIMentors?",
-        a: "Use the contact form on this site or write to alex@foraimentors.com. Selecting Send Message opens your email app with your note ready to send.",
+        a: "The fastest way is to book a 30-minute call from the Contact section. You can also use the contact form or write to alex@foraimentors.com.",
       },
       {
         q: "Can we schedule an introductory conversation?",
-        a: "If you’d like to talk before joining the network or starting a project, we can set up an online conversation when schedules allow.",
+        a: "Yes. Use Book a Call in the Contact section to pick a 30-minute slot on Calendly. We’ll talk through your goals before you join the network or start a project.",
       },
       {
         q: "What should I include in my message?",
@@ -261,38 +259,6 @@ const FAQ = () => {
             ))}
           </Accordion>
         </Flex>
-      </Flex>
-
-      <Flex
-        mt={12}
-        direction="column"
-        align="center"
-        p={{ base: 6, md: 10 }}
-        borderRadius={24}
-        border={`1px solid ${colors.border}`}
-        bg={colors.surface}
-        w="100%"
-        maxW={720}
-        textAlign="center"
-        boxShadow={colors.shadow}
-      >
-        <Heading fontSize={{ base: "xl", md: "2xl" }} mb={3} color={colors.heading}>
-          Have another question?
-        </Heading>
-        <Text color={colors.muted} mb={6} lineHeight={1.7}>
-          Send us a quick message and we’ll get back to you when we can.
-        </Text>
-        <Button
-          as={motion.a}
-          href="#contact"
-          whileHover={{ scale: 1.05 }}
-          rounded="full"
-          bg={colors.primary}
-          color={colors.onPrimary}
-          _hover={{ bg: colors.primary, opacity: 0.9 }}
-        >
-          Contact Us
-        </Button>
       </Flex>
     </Flex>
   );
